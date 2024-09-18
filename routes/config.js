@@ -2,7 +2,7 @@ const mysql = require("mysql");
 
 const db = mysql.createConnection({
   host: "localhost",
-  user: "root",
+  user: "root", // change this according to your databse localhost
   password: "1234", // Your correct root password you can change this to your root password
   database: "medicare", // Your database name
 });
