@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="container navbar">
+        <a href="index.html" alt="HOME">HOME</a>
+        <a href="index.html" alt="SEARCH">SEARCH</a>
+        <a href="profile.html" alt="PROFILE">PROFILE</a>
+        <a href="logout.html" alt="LOGOUT">LOGOUT</a>
+    </div>
+
+    <!-- Profile Section -->
+    <section class="profile">
+        <h2>User Profile</h2>
+        <div class="profile-details">
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Age:</strong> 29</p>
+            <p><strong>Email:</strong> johndoe@example.com</p>
+
+            <!-- Edit Button -->
+            <button onclick="editProfile()">Edit Profile</button>
+
+            <!-- Logout Button -->
+            <button onclick="logout()">Logout</button>
+        </div>
+    </section>
+
+    <script>
+        function editProfile() {
+            alert("Edit profile functionality coming soon!");
+            // In a real application, you'd redirect to an edit profile page or open a form to edit details.
+        }
+
+        function logout() {
+            window.location.href = "logout.html"; // Redirects to logout page
+        }
+    </script>
+</body>
+</html>

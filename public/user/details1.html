@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Doctors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="container navbar">
+            <a href="index.html" alt="HOME">HOME</a>
+            <a href="top-doctors.html" alt="BACK">BACK</a>
+            <a href="profile.html" alt="PROFILE">PROFILE</a>
+            <a href="#" alt="LOGOUT">LOGOUT</a>
+    </div>
+    <!-- Doctor Profile Section -->
+    <section class="doctor-profile">
+        <h2>Doctor's Details</h2>
+        <div class="profile-card">
+            <img src="images/doctor-profile.jpg" alt="Doctor Profile Picture">
+            <h1>Name: Dr.John Doe</h1>
+            <h1>Gastroenterologist</h1>
+            <p>About: Dr John Doe is a renowed Gastroenterologist with over 7 years of experience in diagnosing and treating heart conditions.</p>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <h1>Services</h1>
+    <div class="card-container">
+        <div class="card">
+            <h3>2</h3>
+            <p>322</p>
+            <p>2</p>
+            <div class="card-icons">
+                <button class="book-btn">Book</button>
+            </div>
+        </div>
+        <div class="card">
+            <h3>General Services</h3>
+            <p>300</p>
+            <p>Can be Treated for full check up</p>
+            <div class="card-icons">
+                <button class="book-btn">Book</button>
+            </div>
+        </div>
+        <div class="card">
+            <h3>General Services</h3>
+            <p>300</p>
+            <p>Can be Treated for full check up</p>
+            <div class="card-icons">
+                <button class="book-btn">Book</button>
+            </div>
+        </div>
+        <div class="card">
+            <h3>ge</h3>
+            <p>200</p>
+            <p></p>
+            <div class="card-icons">
+                <button class="book-btn">Book</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Message Display Area -->
+    <div id="message" style="display: none; color: green; position: fixed; top: 10px; right: 10px; padding: 10px; border: 1px solid green; border-radius: 5px;"></div>
+
+    <!-- JavaScript to handle button clicks -->
+    <script>
+        // Get all book buttons
+        const bookButtons = document.querySelectorAll('.book-btn');
+        const message = document.getElementById('message');
+
+        // Add click event listener to each book button
+        bookButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Display the success message
+                message.textContent = 'Booking successful';
+                message.style.display = 'block';
+
+                // Hide the message after 3 seconds
+                setTimeout(() => {
+                    message.style.display = 'none';
+                }, 3000);
+            });
+        });
+    </script>
+</body>
+</html>

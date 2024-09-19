@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.9); /* Slight transparency */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .form-group input[type="file"] {
+            border: none;
+        }
+
+        .form-group button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .form-group button:hover {
+            background-color: #218838;
+        }
+
+        .upload-proof-btn {
+            background-color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .upload-proof-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: #4B0082; /* Darker purple for a sleek look */
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: #FFFFFF; /* White text for readability */
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            color: #FFD700; /* Gold on hover for an elegant effect */
+        }
+         /* Add button styles */
+        .add-button {
+            background-color: #4B0082;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+            margin: 30px auto; /* Centers the button */
+        }
+
+        .add-button:hover {
+            background-color: #FFD700;
+            color: #4B0082;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" alt="HOME">HOME</a>
+        <a href="My-Services.html" alt="BACK">BACK</a>
+        <a href="profile.html" alt="PROFILE">PROFILE</a>
+        <a href="#" alt="LOGOUT">LOGOUT</a>
+    </div>
+
+    <!-- Details Form Container -->
+    <div class="container">
+        <h1>Submit Your Details</h1>
+        <form>
+            <div class="form-group">
+                <label for="Service Name">Service Name</label>
+                <input type="text" id="Service Name" name="Service Name" required>
+            </div>
+            <div class="form-group">
+                <label for="Service Price">Service Price</label>
+                <input type="text" id="Service Price" name="Service Price" required>
+            </div>
+            <div class="form-group">
+                <label for="Service Description">Service Description</label>
+                <input type="text" id="Service Description" name="Service Description" required>
+            </div>
+            <div class="add-button-container">
+                <a onclick="add-button()">Add</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

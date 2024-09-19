@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="container navbar">
+        <a href="index.html" alt="HOME">HOME</a>
+        <a href="manage-customers.html" alt="Back">BACK</a>
+        <a href="profile.html" alt="PROFILE">PROFILE</a>
+        <a href="#" alt="LOGOUT">LOGOUT</a>
+    </div>
+
+    <!-- Customer Details Section -->
+    <section class="customer-details">
+        <h2>Customer Details</h2>
+        <div class="customer-info">
+            <p id="name">Name: John Doe</p>
+            <p id="email">Email: john.doe@example.com</p>
+            <p id="phone">Phone: 123-456-7890</p>
+            <p id="age">Age: 35</p>
+        </div>
+
+        <button id="status-btn" class="status-button">Activate</button>
+    </section>
+
+    <!-- JavaScript to populate data and handle activation -->
+    <script>
+        const queryParams = new URLSearchParams(window.location.search);
+        const customerId = queryParams.get('id');
+
+        // Sample customer data
+        const customers = {
+            1: { name: "John Doe", email: "john.doe@example.com", phone: "123-456-7890", age: 35 },
+            2: { name: "Jane Smith", email: "jane.smith@example.com", phone: "987-654-3210", age: 28 },
+            3: { name: "Robert Brown", email: "robert.brown@example.com", phone: "555-123-4567", age: 42 },
+            4: { name: "Emily White", email: "emily.white@example.com", phone: "222-444-6666", age: 31 },
+            5: { name: "Michael Green", email: "michael.green@example.com", phone: "333-777-8888", age: 39 }
+        };
+
+        // Load customer details based on the customer ID
+        const customer = customers[customerId];
+
+        if (customer) {
+            document.getElementById('name').textContent = `Name: ${customer.name}`;
+            document.getElementById('email').textContent = `Email: ${customer.email}`;
+            document.getElementById('phone').textContent = `Phone: ${customer.phone}`;
+            document.getElementById('age').textContent = `Age: ${customer.age}`;
+        }
+
+        // Toggle activate/deactivate button
+        let isActive = false;
+        const statusButton = document.getElementById('status-btn');
+        statusButton.addEventListener('click', () => {
+            isActive = !isActive;
+            statusButton.textContent = isActive ? 'Deactivate' : 'Activate';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #f4f4f9;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #4B0082; /* Darker purple for a sleek look */
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar a {
+    color: #FFFFFF; /* White text for readability */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #FFD700; /* Gold on hover for an elegant effect */
+}
+
+/* Categories Section */
+.categories {
+    padding: 20px;
+    text-align: center;
+}
+
+.categories h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4B0082; /* Matching purple theme for headings */
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.category-card {
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.category-card img {
+    width: 100%;  /* Fill container */
+    height: 200px; /* Set a consistent height */
+    object-fit: cover; /* Ensure image covers container without distortion */
+    border-radius: 10px; /* Optional rounded corners */
+}
+
+.category-card p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #008080; /* Teal color that complements health-related imagery */
+}
+
+/* Services Section */
+.services {
+    padding: 20px;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4B0082; /* Consistent with the other headings */
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.service-card {
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+    width: 100%; /* Fill container */
+    height: 200px; /* Set a consistent height */
+    object-fit: cover; /* Ensure image covers container without distortion */
+    border-radius: 10px; /* Optional rounded corners */
+}
+
+.service-card p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #006400; /* Dark green for text, symbolizing healthcare and calmness */
+}
+
+/* Hospitals Section */
+.hospitals {
+    padding: 20px;
+    text-align: center;
+}
+
+.hospitals h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4B0082;
+}
+
+.hospital-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid layout */
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.hospital-card {
+    background-color: #fff;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.hospital-card img {
+    width: 100%;
+    max-width: 200px; /* Fixed size for hospital images */
+    height: auto;
+    margin: 0 auto 10px;
+    display: block;
+    border-radius: 10px;
+}
+
+.hospital-card p {
+    margin: 5px 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Address styling */
+.hospital-card p:last-child {
+    color: #666;
+    font-size: 14px;
+    font-style: italic; /* Different style for addresses */
+}
+
+/* Footer Section */
+.footer {
+    background-color: #4B0082;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-link {
+    text-align: center;
+    color: #FFFFFF; /* White text for footer links */
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.footer-link img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    margin: 0 auto 5px;
+}
+
+.footer-link.active {
+    color: #FFD700; /* Gold to match the hover effect of the navbar */
+}
+
+.footer-link:hover {
+    color: #FFD700;
+}
+/* Profile Section */
+.profile {
+    padding: 20px;
+    text-align: center;
+}
+
+.profile h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4B0082; /* Same purple theme */
+}
+
+.profile-details {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    text-align: left;
+}
+
+.profile-details p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #4B0082; /* Purple button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6A0DAD; /* Slightly lighter purple on hover */
+}
+.more-details {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.card-icons i {
+    margin-left: 10px;
+    cursor: pointer;
+    color: #333;
+}
+
+.card-icons i:hover {
+    color: #007bff;
+}
+
+.fa-edit {
+    color: green;
+}
+
+.fa-trash-alt {
+    color: red;
+}
+
+

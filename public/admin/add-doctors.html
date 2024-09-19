@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.9); /* Slight transparency */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .form-group input[type="file"] {
+            border: none;
+        }
+
+        .form-group button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .form-group button:hover {
+            background-color: #218838;
+        }
+
+        .upload-proof-btn {
+            background-color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .upload-proof-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: #4B0082; /* Darker purple for a sleek look */
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: #FFFFFF; /* White text for readability */
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            color: #FFD700; /* Gold on hover for an elegant effect */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" alt="HOME">HOME</a>
+        <a href="index.html" alt="BACK">BACK</a>
+        <a href="profile.html" alt="PROFILE">PROFILE</a>
+        <a href="#" alt="LOGOUT">LOGOUT</a>
+    </div>
+
+    <!-- Details Form Container -->
+    <div class="container">
+        <h1>Submit Your Details</h1>
+        <form>
+            <div class="form-group">
+                <label for="Name">Name:</label>
+                <input type="text" id="Name" name="Name" required>
+            </div>
+            <div class="form-group">
+                <label for="specialist">Specialist:</label>
+                <input type="text" id="specialist" name="specialist" required>
+            </div>
+            <div class="form-group">
+                <label for="Experience">Experience:</label>
+                <input type="text" id="Experience" name="Experience" required>
+            </div>
+            <div class="form-group">
+                <label for="E-mail">E-mail:</label>
+                <input type="email" id="E-mail" name="E-mail" required>
+            </div>
+            <div class="form-group">
+                <label for="Mobile">Mobile Number:</label>
+                <input type="tel" id="Mobile-number" name="Mobile-number" required>
+            </div>
+            <div class="form-group">
+                <label for="Username">Username:</label>
+                <input type="text" id="Username" name="Username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="bio">Bio:</label>
+                <textarea id="bio" name="bio" rows="4" required></textarea>
+            </div>
+
+            <!-- Upload Proof Section -->
+            <div class="form-group">
+                <label for="proof">Upload Proof:</label>
+                <input type="file" id="proof" name="proof" required>
+            </div>
+
+            <!-- Upload Proof Button -->
+            <div class="form-group">
+                <button type="button" class="upload-proof-btn">Upload Proof</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

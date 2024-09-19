@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--=============== REMIXICONS ===============-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="./login page/css.css">
+
+   <style>
+      /* Add custom styles */
+      .login__input {
+         color: #000; /* Default text color for input fields */
+      }
+
+      .login__input option {
+         font-weight: bold; /* Make options text bold */
+         color: black; /* Set text color to black */
+      }
+
+      .login__input {
+         color: black; /* Set text color to black for the select element */
+      }
+
+      .login__input option:checked {
+         font-weight: bold; /* Make selected option text bold */
+      }
+   </style>
+
+   <title>Login form - harsharma30</title>
+</head>
+<body>
+   <div class="login">
+      <img src="./login page/img/bg.jpg" alt="image" class="login__bg">
+
+      <form action="" class="login__form">
+         <h1 class="login__title">Login</h1>
+
+         <div class="login__inputs">
+            <div class="login__box">
+               <input type="email" placeholder="Email ID" required class="login__input">
+               <i class="ri-mail-fill"></i>
+            </div>
+
+            <div class="login__box">
+               <input type="password" placeholder="Password" required class="login__input">
+               <i class="ri-lock-2-fill"></i>
+            </div>
+
+            <!-- Role Selection Dropdown -->
+            <div class="login__box">
+               <select id="role" name="role" required class="login__input">
+                  <option value="" disabled selected>Select Role</option>
+                  <option value="admin">COLLEGE</option>
+                  <option value="user">STUDENT</option>
+                  <option value="doctor">ALUMNI</option> <!-- Changed 'Moderator' to 'Doctor' -->
+               </select>
+               <i class="ri-user-fill"></i>
+            </div>
+         </div>
+
+         <div class="login__check">
+            <div class="login__check-box">
+               <input type="checkbox" class="login__check-input" id="user-check">
+               <label for="user-check" class="login__check-label">Remember me</label>
+            </div>
+
+            <a href="#" class="login__forgot">Forgot Password?</a>
+         </div>
+
+         <button type="submit" class="login__button">Login</button>
+
+         <div class="login__register">
+            Don't have an account? <a href="./login page/register.html">Register</a>
+         </div>
+      </form>
+   </div>
+
+   <!-- JavaScript to handle form submission based on role -->
+   <script>
+      document.querySelector('.login__form').addEventListener('submit', function(event) {
+         event.preventDefault(); // Prevent page refresh
+
+         const email = document.querySelector('input[type="email"]').value;
+         const password = document.querySelector('input[type="password"]').value;
+         const role = document.querySelector('select[name="role"]').value;
+
+         // Example validation based on role
+         if (email && password && role) {
+            alert('Login successful for ' + role);
+            // Redirect to appropriate page based on the role
+            if (role === 'admin') {
+               window.location.href = 'admin_dashboard.html';
+            } else if (role === 'user') {
+               window.location.href = 'user_dashboard.html';
+            } else if (role === 'doctor') {
+               window.location.href = 'doctor_dashboard.html'; // Corrected link for 'Doctor'
+            }
+         } else {
+            alert('Please fill all fields and select a role.');
+         }
+      });
+   </script>
+</body>
+</html>

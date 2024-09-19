@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="container navbar">
+        <a href="index.html" alt="HOME">HOME</a>
+        <a href="index.html" alt="BACK">BACK</a>
+        <a href="profile.html" alt="PROFILE">PROFILE</a>
+        <a href="#" alt="LOGOUT">LOGOUT</a>
+    </div>
+
+    <!-- Doctor Profile Section -->
+    <section class="doctor-profile">
+        <h2>Doctor's Details</h2>
+        <div class="profile-card">
+            <img src="images/doctor-profile.jpg" alt="Doctor Profile Picture">
+            <p>Name: Dr.Sam</p>
+            <p>Specialist: Gastroenterologist</p>
+            <button class="consult-button">Consult</button>
+        </div>
+        <h2>Doctor's Details</h2>
+        <div class="profile-card">
+            <img src="images/doctor-profile.jpg" alt="Doctor Profile Picture">
+            <p>Name: Dr.John Doe</p>
+            <p>Specialist: Cardiologist</p>
+            <button class="consult-button">Consult</button>
+        </div>
+        <h2>Doctor's Details</h2>
+        <div class="profile-card">
+            <img src="images/doctor-profile.jpg" alt="Doctor Profile Picture">
+            <p>Name: Dr. Karthi</p>
+            <p>Specialist: Dermatologist</p>
+            <button class="consult-button">Consult</button>
+        </div>
+        <h2>Doctor's Details</h2>
+        <div class="profile-card">
+            <img src="images/doctor-profile.jpg" alt="Doctor Profile Picture">
+            <p>Name: Dr.Vivek</p>
+            <p>Specialist: Neutrologist</p>
+            <button class="consult-button">Consult</button>
+        </div>
+    </section>
+
+
+    <!-- Dialog Box -->
+    <div id="dialog" class="dialog">
+        <div class="dialog-content">
+            <span class="close" id="closeDialog">&times;</span>
+            <h2>Consultation</h2>
+            <textarea id="query" rows="4" placeholder="Enter your query here..."></textarea>
+            <button id="sendQuery">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
